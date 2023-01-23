@@ -17,24 +17,11 @@ const renderFlags = () => {
                 container.appendChild(infoContainer);
                 container.appendChild(imgContainer);
 
-                container.onmouseover = async () => {                    
-                    container.style.transform = "rotateY(180deg)";
-                    container.style.transition = "transform 0.8s";
-                                        
-                    infoContainer.style.transform = "rotateY(180deg)";
-                    infoContainer.style.zIndex = 2;
-                    imgContainer.style.zIndex = 1;                    
-                    
-                }
-
-                container.onmouseleave = () => {                                        
-                    container.style = ""
-                    infoContainer.style = "";
-                    imgContainer.style = "";                    
-                }
+                let flipper = document.createElement("div");
+                flipper.appendChild(container);
+                flipper.classList.add("flip-container")
                 
-                
-                document.getElementById("flags-container").appendChild(container);                
+                document.getElementById("flags-container").appendChild(flipper);                
             }
         });
 }
@@ -70,7 +57,7 @@ const renderInfoView = (country) => {
     infoContainer.appendChild(subRegionEl);
     
     infoContainer.classList.add(region);
-    // infoContainer.classList.add("back");
+    infoContainer.classList.add("back");
     return infoContainer;
 }
 
@@ -85,7 +72,7 @@ const renderFlagView = (country) => {
 
     const region = country.region;
     imgContainer.classList.add(region);
-    // imgContainer.classList.add("front");
+    imgContainer.classList.add("front");
 
     return imgContainer;
 }
