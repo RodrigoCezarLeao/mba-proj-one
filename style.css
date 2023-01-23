@@ -1,0 +1,67 @@
+body {
+  background-color: #f6f6f6;
+  text-align: center;
+}
+body div#flags-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+body div#flags-container > div.country-container {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  margin: 10px;
+}
+body div#flags-container > div.country-container > div {
+  border: 1px solid black;
+  border-radius: 10px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 200px;
+}
+body div#flags-container > div.country-container > div > img {
+  width: 300px;
+  height: 200px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.back {
+  z-index: 1;
+}
+
+.front {
+  z-index: 2;
+}
+
+.Africa {
+  background-color: lightgreen;
+}
+
+.Americas {
+  background-color: lightyellow;
+}
+
+.Asia {
+  background-color: #ffcccb;
+}
+
+.Europe {
+  background-color: lavender;
+}
+
+.Oceania {
+  background-color: lightblue;
+}
+
+.Antarctic {
+  background-color: #f88;
+}
+
+/*# sourceMappingURL=style.css.map */
